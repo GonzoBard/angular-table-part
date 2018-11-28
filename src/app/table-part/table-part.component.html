@@ -1,0 +1,29 @@
+<section class="app-table-part">
+
+  <h2>Банковские детали</h2>
+
+  <button (click)="addNewLine()">
+    <svg width="30" height="30" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="#svg-addNewLineToTablePart"></use>
+    </svg>
+  </button>
+
+  <table>
+    <tbody>
+    <tr *ngFor="let item of tablePart">
+      <td><input [(ngModel)]="item.name"></td>
+      <td><input [(ngModel)]="item.bik"></td>
+      <td>
+        <button (click)="deleteItem(item.id)">
+          <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="#svg-deleteLineFromTablePart"></use>
+          </svg>
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+</section>
+
+
